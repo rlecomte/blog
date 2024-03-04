@@ -61,4 +61,4 @@ let index =
     >>^ Stdlib.snd)
 ;;
 
-let run = Yocaml_unix.execute (articles >> index)
+let program = articles >> index
