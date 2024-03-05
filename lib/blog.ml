@@ -1,6 +1,7 @@
 open Yocaml
 
 let destination = "_build"
+let css_destination = into destination "css"
 
 let track_binary_update = Build.watch Sys.argv.(0)
 
@@ -61,4 +62,9 @@ let index =
     >>^ Stdlib.snd)
 ;;
 
-let program = articles >> index
+let css =
+  process_files [ "css/" ] (with_extension "css") (fun file ->
+    Build.copy_file file ~into:css_destination)
+;;
+
+let program = css >> articles >> index
