@@ -1,12 +1,12 @@
 open Yocaml
 
-let destination = "_build"
-let css_destination = into destination "css"
+let destination = "_build/bundle/"
+let css_destination = into destination "public/css"
 
 let track_binary_update = Build.watch Sys.argv.(0)
 
 let article_destination file =
-  let fname = basename file |> into "articles" in
+  let fname = basename file |> into "public/articles" in
   replace_extension fname "html"
 ;;
 
