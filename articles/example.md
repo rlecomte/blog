@@ -43,3 +43,9 @@ Curabitur aliquet bibendum dui id tincidunt. Proin in arcu lectus. Sed scelerisq
 
 Sed suscipit purus sed nisi sodales tristique. Cras eu purus et metus mattis ornare eget sit amet erat. Aliquam eleifend, ante et pretium interdum, sem nisl porttitor magna, in molestie ligula nunc non est. Fusce eu sagittis ligula. Vivamus non sollicitudin leo, nec eleifend neque. Fusce malesuada mauris nisi, ac fringilla lectus molestie id. Suspendisse molestie massa sed rhoncus molestie. Etiam in leo nec ligula tristique scelerisque. Donec tincidunt nisl quam, non finibus sem vestibulum ut. Cras eu nibh est. Maecenas quis iaculis augue, fermentum finibus elit. Vivamus quis velit lorem. Aliquam finibus leo non lorem porttitor, sed finibus nulla interdum.
 
+<pre class="mermaid">
+    graph TD
+    A[Client] --> B[Load Balancer]
+    B --> C[Server1]
+    B --> D[Server2]
+</pre>
